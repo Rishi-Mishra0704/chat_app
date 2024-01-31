@@ -52,7 +52,11 @@ class _AuthScreenState extends State<AuthScreen> {
                           ),
                           ElevatedButton(
                             onPressed: () {},
-                            child: const Text("Sign Up"),
+                            style: ElevatedButton.styleFrom(
+                                backgroundColor: Theme.of(context)
+                                    .colorScheme
+                                    .primaryContainer),
+                            child: Text(!_isLogin ? "Sign Up" : "Login"),
                           ),
                           TextButton(
                             onPressed: () {
